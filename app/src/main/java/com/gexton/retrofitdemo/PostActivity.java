@@ -30,7 +30,7 @@ public class PostActivity extends AppCompatActivity {
     ApiService apiService;
     RecyclerView recyclerViewPost;
     List<Post> list = new ArrayList<>();
-    Button btnPhotos;
+    Button btnPhotos, btnPdf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class PostActivity extends AppCompatActivity {
         recyclerViewPost = findViewById(R.id.recyclerViewPost);
         recyclerViewPost.setHasFixedSize(true);
         btnPhotos = findViewById(R.id.btnPhotos);
+        btnPdf = findViewById(R.id.btnPdf);
         recyclerViewPost.setLayoutManager(new LinearLayoutManager(this));
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -70,6 +71,13 @@ public class PostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), PhotosActivity.class));
+            }
+        });
+
+        btnPdf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), GeneratePdfActivity.class));
             }
         });
     }

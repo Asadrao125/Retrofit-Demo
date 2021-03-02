@@ -5,23 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
-    tools:context=".PostActivity">
+    tools:context=".GeneratePdfActivity">
 
     <Button
-        android:id="@+id/btnPhotos"
+        android:id="@+id/btnGenerate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Photos" />
+        android:layout_margin="20dp"
+        android:text="Generate PDF" />
 
-    <Button
-        android:id="@+id/btnPdf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PDF" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPost"
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
