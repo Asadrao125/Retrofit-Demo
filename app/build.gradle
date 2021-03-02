@@ -42,4 +42,5 @@ dependencies {
     implementation 'com.itextpdf:itext-pdfa:5.5.10'
     implementation 'com.itextpdf:itextg:5.5.9'
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.karumi:dexter:6.2.2'
 }
